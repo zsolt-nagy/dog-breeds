@@ -23,16 +23,20 @@ function formSubmitted(event) {
         .then(renderDogs); 
 }
 
+function toLi(value) {
+    return `
+    <li class="dog-item">
+        <img class="dog-image" src="${value}" alt="Image of a dog (query result)." />
+    </li>   
+    `;
+}
+
 function renderDogs(response) {
-    let html = '<ul class="dog-list">';
-    for (let url of response.message) {
-        html += `
-            <li class="dog-item">
-                <img class="dog-image" src="${url}" alt="Image of a dog (query result)." />
-            </li>`;
-    }
-    html += '</ul>';
-    resultsContainer.innerHTML = html;
+    resultsContainer.innerHTML = `
+    <ul class="dog-list">
+        ${ response.message.map(toLi).join('') }
+    </ul>
+    `;
 }
 
 // The below line attaches an event handler function to the submit event
