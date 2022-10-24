@@ -1,9 +1,35 @@
 body {
     color: lightgrey;
     background-color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-width: 500px;
 }
 
+/* form styles */
+.dog-breed-form {
+    text-align: center;
+}
+
+.dog-breed-chooser {
+    padding: 8px;
+    background-color: lightgrey;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.dog-breed-submit {
+    padding: 12px;
+    font-size: 18px;
+    background-color: lightskyblue;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+ 
+/* queried results */
 .dog-list {
     display: flex;
     flex-wrap:wrap;
@@ -12,6 +38,10 @@ body {
     align-items: center;
     margin: 10px;
     padding: 0;
+}
+
+.dog-item {
+    margin: 10px;
 }
 
 .dog-image {
